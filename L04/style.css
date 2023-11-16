@@ -1,0 +1,19 @@
+html {
+    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTE02XqabpxwCHVAkBJQm9JPTraSWyw4eX0Q&usqp=CAU);
+}
+
+.intro {
+position:absolute;
+top: 10px;
+left: 20px;
+width: 400px;
+height: 340px;
+}
+
+.middle{
+position: absolute;
+top: 200px;
+left: 300px;
+width: 200px;
+height: 180px;
+}
