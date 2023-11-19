@@ -1,19 +1,34 @@
 html {
-    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTE02XqabpxwCHVAkBJQm9JPTraSWyw4eX0Q&usqp=CAU);
+    background-image:url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.wallpapersafari.com%2F40%2F40%2FNWt1Mn.jpg&f=1&nofb=1&ipt=35c0f74a80dc4a55e13e2d0871dee8b92e881b7efc0983b186ecb72fa5999424&ipo=images);
+    background-size: cover;
 }
 
-.intro {
-position:absolute;
-top: 10px;
-left: 20px;
-width: 400px;
-height: 340px;
+.title, h1 {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    font-family: cursive;
+    font-size: 50px;
+    color: #432d72;
+    text-shadow: -1px 1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000;
+    transform: translate(-50%, -50%)
 }
 
-.middle{
-position: absolute;
-top: 200px;
-left: 300px;
-width: 200px;
-height: 180px;
+img, video {
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    transform:translate(-50%,-50%)
+}
+
+.intro, .middle, .outro {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 70%;
+    margin: 0 auto;
 }
