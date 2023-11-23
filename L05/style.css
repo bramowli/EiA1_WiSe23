@@ -1,0 +1,59 @@
+html {
+    background-color: #222324;
+    }
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#small {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #916300;
+    height: 305px;
+    width: 36%;
+    border: 5px solid black ;
+  } 
+
+#middle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #3d111c;
+    height: 305px;
+    width: 60%;
+    border: 5px solid black;
+}
+
+#big {
+    position: fixed;
+    bottom: 0;
+    background-color: #0c302c;
+    height: 610px;
+    width: 98%;
+    border: 5px solid black;
+}
+
+@media (min-width: 600px) {
+
+body {
+    flex-direction: column;
+}
+
+#small {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 240px;
+}
+
+#middle {
+    
+}
+
+#big {
+    
+}
+}
