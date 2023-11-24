@@ -5,10 +5,13 @@ html {
 body {
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 #small {
     position: fixed;
+    flex-grow: 2;
     top: 0;
     left: 0;
     background-color: #916300;
@@ -19,6 +22,7 @@ body {
 
 #middle {
     position: fixed;
+    flex-grow: 3;
     top: 0;
     right: 0;
     background-color: #3d111c;
@@ -29,6 +33,7 @@ body {
 
 #big {
     position: fixed;
+    flex-grow: 5;
     bottom: 0;
     background-color: #0c302c;
     height: 610px;
@@ -39,21 +44,32 @@ body {
 @media (min-width: 600px) {
 
 body {
-    flex-direction: column;
+ display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
 }
 
 #small {
-    position: fixed;
+    flex: 1 0 0;
     top: 0;
     left: 0;
     height: 240px;
+    width: 420px;
 }
 
 #middle {
-    
+    flex: 1 0 0;
+    top: 240px;
+    left: 0;
+    height: 470px;
+    width: 420px;
 }
 
 #big {
-    
+    flex: 2 0 0;
+    top: 0;
+    right: 0;
+    width: 849px;
+    height: 710px;
 }
 }
