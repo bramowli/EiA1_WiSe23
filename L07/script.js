@@ -17,38 +17,38 @@ const array = [
     "Come on, it's not that hard. Try again!"
 ]
 
-let scene = prompt(array[0])
+let scene = decision(array[0])
 
 
 if (scene == "look") {
     const chosen1 = decision(array[1])
     if (chosen1 == "scream") {
-        alert(array[3])
-        window.location.reload() //reloads the page
+        end(array[3])
     }
     else if (chosen1 == "closer") {
-        alert(array[4])
-        window.location.reload()
+        end(array[4])
     }
 }
 
 else if (scene == "run") {
     const chosen2 = decision(array[2])
     if (chosen2 == "get up") {
-        alert(array[5])
-        window.location.reload()
+        end(array[5])
     }
     else if (chosen2 == "stay down") {
-        alert(array[6])
-        window.location.reload()
+        end(array[6])
     }
 }
 
 else {
-    alert(array[7])
-    window.location.reload()
+    end(array[7])
 }
 
-function decision(array) {
-    return prompt(array) //the function shows the part of the array that is spacified, takes the input which is put into the prompt and gives it back
+function decision(text) {
+    return prompt(text) //the function shows the part of the array that is spacified, takes the input which is put into the prompt and gives it back
+}
+
+function end(text) {
+    alert(text)
+    window.location.reload() //reloads the window
 }
