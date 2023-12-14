@@ -1,0 +1,22 @@
+html {
+    background-image: url(https://img.freepik.com/fotos-premium/schneeflocken-die-auf-einen-blauen-hintergrund-fallen-generative-ki_410516-49611.jpg) ;
+    background-size: cover;
+}
+
+#window {
+    background-color: #3f4e66;
+    position: fixed;
+    top: 30vh;
+    left: 30vw;
+    right: 30vw;
+    height: 30vh;
+    border-radius: 13px;
+    text-align: center;
+    border: 2px solid white;
+}
+
+#input {
+    position: absolute;
+    bottom: 4vh;
+    left: 50%;
+}
