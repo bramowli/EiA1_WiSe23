@@ -5,18 +5,18 @@ html {
 
 #window {
     background-color: #3f4e66;
-    position: fixed;
-    top: 30vh;
-    left: 30vw;
-    right: 30vw;
+    margin: 35vh 30vw;
     height: 30vh;
     border-radius: 13px;
     text-align: center;
     border: 2px solid white;
+    overflow: auto;
+}
+
+#output {
+    margin: 3vh 2vw;
 }
 
 #input {
-    position: absolute;
-    bottom: 4vh;
-    left: 50%;
+    border-radius: 7px;
 }
