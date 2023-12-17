@@ -1,6 +1,6 @@
 const array = [
     //start scene
-    "Dark trees surround you, their branches heavy from carrying almost more snow than they should be able to. The snow reaches up to half the height of your shin. Your world is white. And quiet. Except for the strange grumbling noises that seem to be coming from just behind the closest snowcovered shrub. What would be the best course of action? Will you turn around and run without looking back, or will you, like every horror movie character ever, satisfy your curiosity by looking for the origin of the noises?<br>Run or look?</br>",
+    "Dark trees surround you, their branches heavy from carrying almost more snow than they should be able to. The snow reaches up to half the height of your shin. <br>Your world is white. <br>And quiet. <br>Except for the strange grumbling noises that seem to be coming from just behind the closest snowcovered shrub. What would be the best course of action? <br>Will you turn around and run without looking back, or will you, like every horror movie character ever, satisfy your curiosity by looking for the origin of the noises?<br></br>Run or look?",
     //if you choose look
     "Trying to not make any noise you carefully sneak around the shrub. <br>There is still only white. But one of the snowy bushes is moving. While you stand there and watch, the bush begins to grow and slowly turn around. Instead of a plant you see yourself confronted with a dirty white, hairy heap of a being whose teeth are a little too long to be considered cute. <br>You stare at eachother. <br>Torn between your fascination and the primal urge to simply scream you stay unmoving for another moment, before you act. <br></br>Scream or go closer?",
     //if you choose run
@@ -20,68 +20,40 @@ const input = document.getElementById("input")
 const output = document.getElementById("output")
 
 let state = 0
+output.innerHTML = array[0]
 
 
 input.addEventListener("keydown", function (event) {
     if (event.key == "Enter") {
         if (state == 0) {
-            story1()
+            story("look", "run", 1, 2, 7)
         }
         else if (state == 1) {
-            story2()
+            story("scream", "go closer", 3, 4, 7)
         }
         else if (state == 2) {
-            story3()
+            story("get up", "stay down", 5, 6, 7)
+        }
+        else {
+            window.location.reload()
         }
     }
 })
 
-function story1() {
-    if (input.value == "look") {
-        output.innerHTML = array[1]
-        state++
+function story(option1, option2, state1, state2, elseState) {
+    if (input.value == option1) {
+        changeState(state1)
     }
-    else if (input.value == "run") {
-        output.innerHTML = array[2]
-        state += 2
+    else if (input.value == option2) {
+        changeState(state2)
     }
     else {
-        output.innerHTML = array[7]
+        changeState(elseState)
     }
     input.value = ""
 }
 
-function story2() {
-    if (input.value == "scream") {
-        output.innerHTML = array[3]
-        state++
-    }
-    else if (input.value == "go closer") {
-        output.innerHTML = array[4]
-        state += 2
-    }
-    else {
-        output.innerHTML = array[7]
-    }
-    input.value = ""
-}
-
-function story3() {
-    if (input.value == "get up") {
-        output.innerHTML = array[5]
-        state++
-    }
-    else if (input.value == "stay down") {
-        output.innerHTML = array[6]
-        state+= 2
-    }
-    else {
-        output.innerHTML = array[7]
-    }
-    input.value = ""
-}
-
-function end(text) {
-    output.innerHTML = (text)
-    window.location.reload()
+function changeState(next) {
+    state = next
+    output.innerHTML = array[next]
 }

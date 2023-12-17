@@ -3,10 +3,21 @@ html {
     background-size: cover;
 }
 
+body {
+    height: 100vh;
+}
+#fake {
+    display: flex;
+    height: 100vh;
+    justify-items: center;
+    align-items: center;
+}
+
 #window {
+    width: 60%;
+    height: 400px;
+    margin: auto;
     background-color: #3f4e66;
-    margin: 35vh 30vw;
-    height: 30vh;
     border-radius: 13px;
     text-align: center;
     border: 2px solid white;
@@ -15,8 +26,15 @@ html {
 
 #output {
     margin: 3vh 2vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-large;
+    font-style: italic;
 }
 
 #input {
     border-radius: 7px;
+    font-size: x-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    text-align: center;
 }
