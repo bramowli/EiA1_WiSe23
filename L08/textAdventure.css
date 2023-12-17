@@ -1,11 +1,13 @@
 html {
-    background-image: url(https://img.freepik.com/fotos-premium/schneeflocken-die-auf-einen-blauen-hintergrund-fallen-generative-ki_410516-49611.jpg) ;
+    background-image: url(https://img.freepik.com/fotos-premium/schneeflocken-die-auf-einen-blauen-hintergrund-fallen-generative-ki_410516-49611.jpg);
     background-size: cover;
 }
 
 body {
     height: 100vh;
 }
+
+/* the fake body is only there because it somehow didn't work in the normal body and my computer scientist friend said that's how you do it sometimes*/
 #fake {
     display: flex;
     height: 100vh;
